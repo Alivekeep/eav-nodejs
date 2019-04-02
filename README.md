@@ -21,7 +21,12 @@ Making database migrations
 npm run database:up
 ```
 
+Starting server
 
-Data types
-- String
-- Integer
+```bash
+npm run server:start
+```
+
+#### API
+
+Postman [collection](https://www.getpostman.com/collections/ddd4f11b56ce1436c0ec) for the testing
