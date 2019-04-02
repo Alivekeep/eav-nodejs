@@ -4,17 +4,32 @@
   "description": "",
   "main": "index.js",
   "directories": {
+    "data": "data",
     "lib": "lib",
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "database:up": "npm run database:build && npm run database:truncate && npm run database:migrations",
+    "database:truncate": "node ./commands/truncate.js",
+    "database:build": "node ./commands/build.js",
+    "database:migrations": "node ./commands/migrations.js",
+    "docker:start": "docker-compose -p 'eav-test' up"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Alivekeep/eav-nodejs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "keywords": [
+    "nodejs",
+    "EAV",
+    "entity-attribute-value",
+    "postgres"
+  ],
+  "author": "Alivekeep",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "pg": "^7.9.0",
+    "validate": "^4.5.1"
+  }
 }
