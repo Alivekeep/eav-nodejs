@@ -4,7 +4,7 @@ const Person = new Model();
 
 Person.define("attribute", "firstName").validation({ required: true });
 Person.define("attribute", "lastName").validation({ required: true });
-Person.define("attribute", "email").validation({ required: true });
+Person.define("attribute", "email").validation({});
 Person.define("attribute", "age")
   .validation({ min: 1, max: 120 })
   .withType("integer");

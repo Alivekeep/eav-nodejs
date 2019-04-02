@@ -12,7 +12,7 @@ readdirSync(`${__dirname}/source`)
   .forEach(file => {
     const fileName = file.replace(".js", "");
 
-    models[fileName] = require(path.join(__dirname, 'source', file));
+    models[fileName] = require(path.join(__dirname, "source", file));
   });
 
 module.exports = models;
