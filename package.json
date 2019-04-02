@@ -9,10 +9,10 @@
     "test": "tests"
   },
   "scripts": {
-    "database:up": "npm run database:build && npm run database:truncate && npm run database:migrations",
+    "database:up": "npm run database:build && npm run database:truncate",
     "database:truncate": "node ./commands/truncate.js",
     "database:build": "node ./commands/build.js",
-    "database:migrations": "node ./commands/migrations.js",
+    "server:start": "node ./server/index.js",
     "docker:start": "docker-compose -p 'eav-test' up"
   },
   "repository": {
@@ -29,7 +29,9 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^7.0.0",
-    "pg": "^7.9.0",
-    "validate": "^4.5.1"
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "pg": "^7.9.0"
   }
 }
